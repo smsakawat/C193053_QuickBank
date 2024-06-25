@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/app.css" />
+  <title>QuickBank</title>
+</head>
+
+<body>
+  <!-- TOP NAVIGATION -->
+  <nav>
+    <p class="welcome">Log in to get started</p>
+    <div class="logo_container" id="home_btn">
+      <img src="img/logo.png" alt="QuickBank logo" class="nav__logo" id="logo" />
+      <span class="logo_text">QuickBank</span>
+    </div>
+    <div>
+      <form class="login">
+        <input type="text" placeholder="user" class="login__input login__input--user" />
+        <input type="text" placeholder="PIN" maxlength="4" class="login__input login__input--pin" />
+        <button class="login__btn">&rarr;</button>
+      </form>
+      <div class="demo_accounts">
+        <p style="font-weight: 500;">Please use these demo accounts for login & transferring money</p>
+        <p style="margin: 4px 0;">
+          username: sh<br>pin: 1111
+        </p>
+        <span style="font-size:14px">or</span>
+        <p style="margin: 4px 0">
+          username: jc<br>pin: 2222
+        </p>
+      </div>
+    </div>
+  </nav>
+
+  <main class="app">
+    <!-- BALANCE -->
+    <div class="balance">
+      <div>
+        <p class="balance__label">Current balance</p>
+      </div>
+      <p class="balance__value">0000$</p>
+    </div>
+
+    <!-- MOVEMENTS -->
+    <div class="movements">
+
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+      <p class="summary__label">In</p>
+      <p class="summary__value summary__value--in">0000$</p>
+      <p class="summary__label">Out</p>
+      <p class="summary__value summary__value--out">0000$</p>
+      <p class="summary__label">Interest</p>
+      <p class="summary__value summary__value--interest">0000$</p>
+      <button class="btn--sort">&downarrow; SORT</button>
+    </div>
+
+    <!-- OPERATION: TRANSFERS -->
+    <div class="operation operation--transfer">
+      <h2>Transfer money</h2>
+      <form class="form form--transfer">
+        <input type="text" class="form__input form__input--to" placeholder="username" />
+        <input type="number" class="form__input form__input--amount" placeholder="amount" />
+        <button class="form__btn form__btn--transfer">&rarr;</button>
+        <label class="form__label">Transfer to</label>
+        <label class="form__label">Amount</label>
+      </form>
+    </div>
+
+    <!-- OPERATION: LOAN -->
+    <div class="operation operation--loan">
+      <h2>Request loan</h2>
+      <form class="form form--loan">
+        <input type="number" class="form__input form__input--loan-amount" placeholder="amount" />
+        <button class="form__btn form__btn--loan">&rarr;</button>
+        <label class="form__label form__label--loan">Amount</label>
+      </form>
+    </div>
+
+    <!-- OPERATION: CLOSE -->
+    <div class="operation operation--close">
+      <h2>Close account</h2>
+      <form class="form form--close">
+        <input type="text" class="form__input form__input--user" placeholder="your username" />
+        <input type="password" maxlength="6" class="form__input form__input--pin" placeholder="your pin" />
+        <button class="form__btn form__btn--close">&rarr;</button>
+        <label class="form__label">Confirm user</label>
+        <label class="form__label">Confirm PIN</label>
+      </form>
+    </div>
+
+    <!-- LOGOUT TIMER -->
+    <p class="logout-timer">
+      You will be logged out in <span class="timer">05:00</span>
+    </p>
+  </main>
+
+  <footer>
+    &copy; by Sakawat Hossain Chowdhury
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
